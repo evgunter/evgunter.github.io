@@ -5,21 +5,34 @@
   body {
   font-family: 'Lucida Sans', sans-serif;
   margin: 2% 8% 2% 8%;
-  color: #383a66;
+  color: #260a57;
+  background-color: #fafaff;
   }
 
-  header {
-  color: #6266b3
+  h1 {
+    color: #6266b3;
+  }
+
+  h2 {
+  color: #7340cc;
+  }
+
+  h3 {
+  color: #7f73cc;
+  }
+
+  h4 {
+    color: #8084d9;
   }
 
   a:link {
-  color: #7e81e6;
+  color: #4d7fff;
   }
 
   a:visited {
-  color: #6265b3;
-}
-  
+  color: #9a73cc;
+  }
+
 </style>
 </head>
 
@@ -32,24 +45,64 @@
 <img src="portrait.jpg" height=192px ALIGN="right" style="padding-left: 4%; padding-right: 4%; padding-bottom: 2%;" />
 
 <p>
-I'm currently pivoting my career to work on AI safety. Previously I was a research engineer at <a href="https://granica.ai/">Granica</a>, working on data compression. I graduated from Caltech in 2019, with B.S. degrees in mathematics (advisor Nets Katz), computer science (advisor Chris Umans), and philosophy (advisor Chip Sebens).
-</p>
-
-<p>
   Email: evgunter at gmail dot com
 </p>
 
 <p>
-<a href="https://evgunter.github.io/cv.pdf">CV</a>, last updated 9/2023.
+<a href="https://evgunter.github.io/cv.pdf">CV</a>, last updated 10/24.
 </p>
 
 <header>
-  <h2>Research Interests<h2>
+  <h2>Research interests<h2>
+</header>
+
+<header>
+  <h3>Learning theory and mechanistic interpretability</h3>
 </header>
 
 <ul>
-  <li>AI safety, which I am currently researching as a <a href="https://www.serimats.org">SERI MATS Scholar</a> </li>
-  <li>Anthropic reasoning, on which I wrote a <a href="https://evgunter.github.io/Anthropic_reasoning_in_infinite_worlds.pdf">thesis</a> with advisor Chip Sebens
+  <li> Geometry of loss landscapes</li>
+  <ul>
+    <li>Dependence on specific optimizers of the loss landscape's local geometric properties during training, on which I mentored a <a href="https://www.cambridgeaisafety.org/mars/evan-ryan-gunter">MARS</a> project <a href="https://arxiv.org/abs/2409.04913">(paper)</a></li>
+    <li>Understanding to what extent different training runs lead to qualitatively different solutions; generalization of the finding that, in deep linear nets, <a href="http://proceedings.mlr.press/v80/laurent18a/laurent18a.pdf">all local minima are global</a> to nets with nonlinearities such as ReLUs</li>
+  </ul>
+  <li>Understanding how LLMs work, and application of these insights to mechanistic interpretability</li>
+  <ul>
+    <li>How well SAEs represent true underlying features</li>
+    <li>How LLMs perform computations on their internal representations of features</li>
+    <li>How important attention is at scale compared to MLP layers</li>
+  </ul>
+</ul>
+
+<header>
+  <h3>Limits of future models</h3>
+</header>
+
+<ul>
+  <li>Adversarial examples</li>
+  <ul>
+    <li>Whether adversarial examples are preventable or a necessary consequence of some aspect of how ML models work, like <a href="https://transformer-circuits.pub/2022/toy_model/index.html">superposition</a></li>
+    <li>Generalization of adversarial examples between models with different architectures or models trained on different datasets</li>
+  </ul>
+  <li>Theoretical minimum sizes of models with certain capabilites; putting bounds on greatest possible <a href="https://aiimpacts.org/hardware-overhang/">hardware overhang</a></li>
+  <li>The limits of out-of-distribution generalization; especially, whether LLMs can gain capabilities qualitatively beyond those demonstrated by humans in their training data</li>
+</ul>
+
+<header>
+  <h3>Scalable oversight and control</h3>
+</header>
+<ul>
+  <li>Self-refining alignment strategies such as Constitutional AI, Superalignment, and multimodal model self-supervision</li>
+  <li>Non-alignment strategies for safe AI in the short term, especially leveraging the low agency of frontier models</li>
+</ul>
+
+<header>
+  <h3>Philosophy</h3>
+</header>
+
+<ul>
+  <li>Moral patienthood of AI systems, and connections between goals and affective states</li>
+  <li>Anthropic reasoning, on which I wrote a <a href="https://evgunter.github.io/Anthropic_reasoning_in_infinite_worlds.pdf">thesis</a> with advisor <a href="https://sites.google.com/site/csebens/">Chip Sebens</a>
     <ul>
       <li>Consequences of different formalizations of anthropic reasoning</li>
       <li>Application to the many-worlds interpretation of quantum mechanics</li>
@@ -57,19 +110,33 @@ I'm currently pivoting my career to work on AI safety. Previously I was a resear
       <li>Addressing mathematical issues in infinite universes</li>
     </ul>
   </li>
+  <li>The hard problem of consciousness and Russellian monism, on which I did a small research project with advisor <a href="http://www.its.caltech.edu/~fehardt/">Frederick Eberhardt</a> and collaborator Alex Denko</li>
   <li>Philosophy of fundamental physics</li>
   <ul>
     <li>Ontology of physical laws</li>
     <li>Implications of the many-worlds interpretation of quantum mechanics</li>
   </ul>
-  <li>Automated theorem proving, especially using machine learning, on which I did a small research project with advisor Mike Vanier and collaborator Aidan Swope</li>
-  <li>Nonstandard models of computation</li>
-  <ul>
-    <li>Stochastic chemical reaction networks, on which I did summer research with advisor Erik Winfree</li>
-    <li>Computational consequences of hypothetical physical scenarios (black holes, closed timelike curves)</li>
-  </ul>
-  <li>The hard problem of consciousness and Russellian monism, on which I did a small research project with advisor Frederick Eberhardt and collaborator Alex Denko</li>
 </ul>
+
+<header>
+  <h2>Projects and publications<h2>
+</header>
+
+<ul>
+  <li><a href="https://arxiv.org/abs/2401.03529">Quantifying stability of non-power-seeking in artificial agents</a></li>
+  <li><a href="https://arxiv.org/abs/2409.04913">NGD converges to less degenerate solutions than SGD</a></li>
+  <li>My <a href="https://github.com/evgunter">GitHub</a></li>
+</ul>
+
+<header>
+  <h2>Background<h2>
+</header>
+
+<p>
+  I have recently transitioned to researching AI safety.
+  Previously I was a research engineer at <a href="https://granica.ai/">Granica</a> working on data compression.
+  I graduated from Caltech in 2019, with B.S. degrees in mathematics (advisor <a href="https://en.wikipedia.org/wiki/Nets_Katz">Nets Katz</a>), computer science (advisor <a href="http://users.cms.caltech.edu/~umans/">Chris Umans</a>), and philosophy (advisor <a href="https://sites.google.com/site/csebens/">Chip Sebens</a>).
+</p>
 
 </body>
 
