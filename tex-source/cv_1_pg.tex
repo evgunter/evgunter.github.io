@@ -1,0 +1,376 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+
+\usepackage{calc}
+
+% \def\myh{10pt}  % for labels as redefined subsection*
+\def\myh{20pt}
+\def\marg{0.5in}
+\def\vmarg{0.5in}
+\def\indentlen{1ex}
+\usepackage[left=\marg+\myh*2-\indentlen,right=\marg-5pt,bottom=\vmarg,top=\vmarg]{geometry}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{changepage}
+\usepackage{xcolor}
+
+\definecolor{sidebar}{HTML}{6266b3}    % title and top section headings
+\definecolor{boldpurple}{HTML}{7340cc} % organization names
+\definecolor{normaltext}{HTML}{260a57}
+\definecolor{linkblue}{HTML}{4d7fff}
+\definecolor{lavender}{HTML}{7f73cc}   % titles of positions
+\definecolor{lavender2}{HTML}{9a73cc}  % role comments
+\definecolor{lavender3}{HTML}{8084d9}  % dates and top info bar
+\definecolor{backgroundcolor}{HTML}{fafaff}
+% \definecolor{brightpurple}{HTML}{721aff}
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=cyan,
+    filecolor=magenta,      
+    urlcolor=linkblue,
+    pdftitle={Evan Ryan Gunter CV},
+    pdfpagemode=FullScreen,
+    }
+
+\newcommand{\datecolor}{lavender3}
+
+\let\oldbold\textbf
+\renewcommand{\textbf}[1]{\oldbold{\color{boldpurple} #1}}
+\let\olditalic\textit
+\renewcommand{\textit}[1]{\olditalic{\color{lavender} #1}}
+
+\newcommand{\textittwo}[1]{\olditalic{\color{lavender2} #1}}
+
+\urlstyle{same}
+
+\setlength\parindent{0em}
+\linespread{1.05}
+
+\usepackage{rotating}
+
+\newlength\labelbracketsep
+\setlength{\labelbracketsep}{\myh+5pt}
+
+\newlength\bracketcompensatoryleftshift
+\setlength{\bracketcompensatoryleftshift}{\labelbracketsep-\myh/2}
+
+\newlength{\myl}
+\newlength\halfmyl
+\newcommand{\rotatesubsection}[1]{\vspace{0cm}
+\settowidth{\myl}{\Large\bfseries #1} %\hspace{2pt} % for use as redefined section
+\setlength{\halfmyl}{\myl/2}
+\rotatebox{90}{\hspace{-\halfmyl} \begin{minipage}{\myl} \Large \bf \color{sidebar} #1 \vspace{-\labelbracketsep} % \hspace{2pt}
+    \end{minipage}} % \vspace{-\myl} 
+\let\halfmyl\relax
+\let\myl\relax}
+
+% \let\oldsubsection\subsection
+% \renewcommand{\subsection}[2][]{\oldsubsection*{\rotatesubsection{#2}}}
+\renewcommand{\subsection}[1]{}
+
+\titlespacing*{\section}{0pt}{*1}{*0}
+\titlespacing*{\subsection}
+{-10pt-\myh}{0.5ex}{0.5ex}
+
+% SWITCH ON TO REENABLE NORMAL SUBSECTION TITLE FORMAT:
+% \titlespacing*{\section}
+% {0pt}{0ex}{0ex}
+% \titlespacing*{\subsection}
+% {0pt}{0.5ex}{0.5ex}
+
+\newcommand{\myverticalspace}{\vspace{0.2cm}}
+\newcommand{\mysmallerverticalspace}{\vspace{2pt}}
+
+% length to use if "present" is a date
+% \newcommand{\datecolwidth}{37pt}
+% \newcommand{\datecolwidth}{23pt}
+\newcommand{\datecolwidth}{29pt}
+
+% \newcommand{\titlecolwidth}{383pt}
+% \newcommand{\titlecolwidth}{399pt}
+% \newcommand{\titlecolwidth}{442pt}
+\newcommand{\titlecolwidth}{\textwidth - \datecolwidth*3 + \myh/2 - 5pt}
+
+\newcommand\BrText[2]{%
+  \par\smallskip
+  \hspace{-\bracketcompensatoryleftshift}
+   \noindent\makebox[\textwidth][r]{{#1} $\color{sidebar}\left\{
+    \begin{minipage}{\textwidth}
+    {\color{normaltext} #2}
+    \end{minipage}
+  \right.\nulldelimiterspace=0pt$}\par\smallskip
+}
+
+% \usepackage{array}
+% \newcolumntype{x}[1]{>{\centering\arraybackslash\hspace{0pt}}p{#1}}
+
+\begin{document}
+\begin{center}
+{\Large\textbf{\color{sidebar}Evan Ryan Gunter}}
+
+
+\vspace{2pt}
+
+\color{normaltext}
+\pagecolor{backgroundcolor}
+
+\newlength{\myhthree}
+\setlength{\myhthree}{\myh*3}
+
+\newlength\headerspace
+\setlength\headerspace{0.3cm}
+\begin{tabular}{cccc}
+\hspace{-\myhthree}
+\color{lavender}
+evgunter@gmail.com \hspace{\headerspace} & \hspace{\headerspace} \href{https://evgunter.github.io}{website} \hspace{\headerspace} & \hspace{\headerspace} \href{https://github.com/evgunter}{github} \hspace{\headerspace} & \hspace{\headerspace} \color{lavender} 510 812 7851
+\end{tabular}
+\end{center}
+
+\let\myhthree\relax
+
+\thispagestyle{empty}
+
+\newlength{\myhplus}
+\setlength{\myhplus}{\myh-11pt}
+\vspace{-\myhplus}
+\let\myhplus\relax
+
+\newlength{\rolesep}
+\setlength{\rolesep}{6pt}
+
+
+\BrText{\rotatesubsection{Professional Experience}}{
+
+\vspace{2pt}
+
+\begin{adjustwidth}{\indentlen}{0ex}
+
+\color{\datecolor}
+
+\begin{tabular}{@{}p{\titlecolwidth}r@{|}p{\datecolwidth}@{}}
+  {\textbf{\hspace{-\indentlen}Personal projects (see below)}} & 03/24 & 10/24
+  \end{tabular}
+
+\mysmallerverticalspace
+
+\textbf{\hspace{-\indentlen}ML Alignment \& Theory Scholars}
+
+\color{\datecolor}
+
+\begin{tabular}{@{}p{\titlecolwidth}r@{|}p{\datecolwidth}@{}}
+{\textit{Research Scholar -- \href{https://www.davidlindner.me/}{David Lindner}} \hspace{\rolesep} \textittwo{collab: \href{https://rycolab.io/authors/evzen/}{Evžen Wybitul}, \href{https://scholar.google.com/citations?user=zHaNRJIAAAAJ&hl=en}{Mikhail Seleznyov}}} & 01/24 & 03/24
+\end{tabular}
+
+\color{normaltext}
+
+Made vision/language model benchmark to assess VLM models as RL process supervisors
+
+\color{\datecolor}
+
+\begin{tabular}{@{}p{\titlecolwidth}r@{|}p{\datecolwidth}@{}}
+\textit{Long-Term Future Fund Grantee} & 09/23 & 01/24
+\end{tabular}
+
+\color{normaltext}
+
+Investigated loss landscape geometry theoretically using results from high-dimensional math and physics; tested related predictions of Singular Learning Theory
+
+\mysmallerverticalspace
+
+\color{\datecolor}
+
+\begin{tabular}{@{}p{\titlecolwidth}r@{|}p{\datecolwidth}@{}}
+  {\textit{Research Scholar -- \href{https://vkrakovna.wordpress.com/}{Victoria Krakovna}} \hspace{\rolesep} \textittwo{collab: \href{https://www.math.toronto.edu/ylio/}{Yevgeny Liokumovich}}} & 06/23 & 09/23
+  \end{tabular}
+
+\color{normaltext}
+
+Studied stability of power-seeking for MDPs \href{https://arxiv.org/abs/2401.03529}{[x]};
+improved formalism of power as optionality \href{https://drive.google.com/file/d/1jyu0U2VYuy3Srrp7Sfs56xBDZUqNymQA/view?usp=drive_link}{[x]}
+
+\mysmallerverticalspace
+
+\textbf{\hspace{-\indentlen}Granica}
+
+\color{\datecolor}
+
+\begin{tabular}{@{}p{\titlecolwidth}r@{|}p{\datecolwidth}@{}}
+\textit{Research Engineer} & 02/22 & 07/23
+\end{tabular}
+
+\color{normaltext}
+
+Data compression research; used black box optimization, sketch algorithms, statistical modeling, Bayesian estimation,
+spectral clustering,
+integer linear programming,
+% gradient descent,
+% automated hyperparameter tuning,
+singular value thresholding
+
+\mysmallerverticalspace
+
+\color{\datecolor}
+
+\begin{tabular}{@{}p{\titlecolwidth}r@{|}p{\datecolwidth}@{}}
+\textit{Software Engineer} & 02/21 & 02/22
+\end{tabular}
+
+\color{normaltext}
+
+Configured cloud infrastructure for data compression platform; developed interfacing tools
+
+\mysmallerverticalspace
+
+\color{\datecolor}
+\begin{tabular}{@{}p{\titlecolwidth}r@{|}p{\datecolwidth}@{}}
+\textbf{\hspace{-\indentlen}Berkeley Existential Risk Initiative} \textit{Research Assistant to \href{https://www.ox.ac.uk/news-and-events/find-an-expert/dr-anders-sandberg}{Anders Sandberg}} & 04/21 & 12/21
+\end{tabular}
+
+\color{normaltext}
+
+For book draft, checked physics calculations; advised on philosophy % , etc.
+and other
+content in 1-1s
+
+\mysmallerverticalspace
+
+\color{\datecolor}
+
+\begin{tabular}{@{}p{\titlecolwidth}r@{|}p{\datecolwidth}@{}}
+\textbf{\hspace{-\indentlen}Theorem LP} \hspace{\rolesep} \textit{Engineering Intern} & 07/18 & 09/18
+\end{tabular}
+
+\color{normaltext}
+
+Detected duplicate applications using nearest neighbor search in SQL; configured ETL pipeline
+
+\mysmallerverticalspace
+
+\textbf{\hspace{-\indentlen}California Institute of Technology}
+
+\color{\datecolor}
+
+\begin{tabular}{@{}p{\titlecolwidth}r@{|}p{\datecolwidth}@{}}
+\textit{Head Deans' Tutor: Ma 1, Ph 1; TA: CS 4, Ma/CS 6a, Bi 1; Peer Tutor, Writing} & 04/16 & 06/19 \\
+\textit{Summer Undergraduate Research Fellowship} \hspace{\rolesep} \textittwo{advisor: \href{https://www.dna.caltech.edu/~winfree/}{Erik Winfree}} & 06/17 & 08/17
+\end{tabular}
+
+\color{normaltext}
+
+Implementation of randomized algorithms with stochastic chemical reaction networks
+
+\color{\datecolor}
+
+\mysmallerverticalspace
+
+\begin{tabular}{@{}p{\titlecolwidth}r@{|}p{\datecolwidth}@{}}
+\textbf{\hspace{-\indentlen}JPL Science Data Modeling and Computing Group} \hspace{\rolesep} \textit{Intern} & 07/16 & 09/16
+\end{tabular}
+
+\end{adjustwidth}
+
+\color{normaltext}
+\vspace{-4pt}
+}
+
+\newlength\myhplus
+\setlength{\myhplus}{\myh-2pt}
+% \vspace{-22pt}  % depends on the height of the body paragraph below, unfortunately
+\vspace{-\myhplus}  % appropriate if first element has a label that is shorter vertically than the text
+\let\myhplus\relax
+
+\BrText{\rotatesubsection{Education}}{
+\vspace{3pt}
+\begin{adjustwidth}{\indentlen}{0ex}
+\textbf{\hspace{-\indentlen}California Institute of Technology}
+
+\color{\datecolor}
+
+\begin{tabular}{@{}p{\titlecolwidth}r@{|}p{\datecolwidth}@{}}
+\textit{BS Mathematics, BS Computer Science, BS Philosophy} \hspace{\rolesep} \textittwo{3.6 GPA} & 09/15 & 06/19
+\end{tabular}
+
+\color{normaltext}
+
+Only 2019 triple major; 8 A+'s; research in CS and philosophy; thesis in philosophy of physics; 14 physics courses (3 grad-level); peer tutoring and TAing in CS, math, writing, and physics\vspace{-2pt}\end{adjustwidth}}
+
+\vspace{-3pt}
+
+\BrText{\rotatesubsection{Projects}}{
+\vspace{2pt}
+\begin{adjustwidth}{\indentlen}{0ex}
+
+\color{\datecolor}
+
+\begin{tabular}{@{}p{\titlecolwidth}r@{|}p{\datecolwidth}@{}}
+  \textbf{\hspace{-\indentlen}Independent} & 05/23 & 10/24
+\end{tabular}
+
+\color{normaltext}
+
+\href{https://github.com/evgunter/keymap_optimization}{Personalized ML chording keymap optimization},
+\href{https://github.com/evgunter/inside_out_expand}{Rust macros to control expansion order of other macros},
+\href{https://github.com/evgunter/we_have_gpt_4_at_home}{GPT-4 bot},
+improved dependency repos \href{https://github.com/evgunter/twidlk_rust}{[x]}\href{https://github.com/evgunter/tikzplotly}{[x]},
+\href{https://source.android.com/docs/security/overview/acknowledgements\#feb-2024}{found} a \href{https://source.android.com/docs/security/bulletin/2024-02-01}{high-severity} security \href{https://nvd.nist.gov/vuln/detail/CVE-2023-40093}{bug in Android}
+
+\mysmallerverticalspace
+
+\color{\datecolor}
+
+\begin{tabular}{@{}p{\titlecolwidth}r@{|}p{\datecolwidth}@{}}
+  \textbf{\hspace{-\indentlen}Mentorship for Alignment Research Students \href{https://www.cambridgeaisafety.org/mars/evan-ryan-gunter}{(MARS)}} \hspace{\rolesep} \textit{Mentor} \hspace{\rolesep} & 01/24 & 05/24
+\end{tabular}
+
+\color{normaltext}
+
+Mentored students in projects on loss landscape geometry with different optimizers \href{https://arxiv.org/abs/2409.04913}{[x]},
+extending deep linear net minima results to permit ReLUs,
+and how fast model training Markov chains ``mix''
+
+\mysmallerverticalspace
+
+\textbf{\hspace{-\indentlen}California Institute of Technology}
+
+\color{\datecolor}
+
+\begin{tabular}{@{}p{\titlecolwidth}r@{|}p{\datecolwidth}@{}}
+\textit{Undergraduate Projects in C.S.} \hspace{\rolesep} \textittwo{advisor: \href{http://users.cms.caltech.edu/~mvanier/}{Mike Vanier} \hspace{\rolesep} collab: \href{https://aidanswope.com/about}{Aidan Swope}} & 04/19 & 06/19
+\end{tabular}
+
+\color{normaltext}
+
+Investigated AlphaZero-inspired tree search for automated theorem proving
+
+\mysmallerverticalspace
+
+\color{\datecolor}
+
+\begin{tabular}{@{}p{\titlecolwidth}r@{|}p{\datecolwidth}@{}}
+\textit{Philosophy thesis} \hspace{\rolesep} \textittwo{advisor: \href{https://sites.google.com/site/csebens/}{Chip Sebens}} \hspace{\rolesep} \href{{https://evgunter.github.io/Anthropic_reasoning_in_infinite_worlds.pdf}}{\it Anthropic reasoning in infinite worlds} & 09/18 & 06/19
+\end{tabular}
+
+\color{normaltext}
+
+Argued that self-indication assumption is less arbitrary than Bostrom's self-selection assumption; addressed mathematical issues in infinite worlds; applied findings to spacetime dimensionality
+
+\mysmallerverticalspace
+
+\color{\datecolor}
+
+\begin{tabular}{@{}p{\titlecolwidth}r@{|}p{\datecolwidth}@{}}
+\textit{Reading in Philosophy} \hspace{\rolesep} \textittwo{advisor: \href{http://www.its.caltech.edu/~fehardt/}{Frederick Eberhardt} \hspace{\rolesep} collab: Alex Denko} & 01/19 & 04/19
+\end{tabular}
+
+\color{normaltext}
+
+Papers on Russellian monism, mathematical universe hypothesis; population ethics, panpsychism
+
+
+\vspace{-3pt}
+\end{adjustwidth}
+}
+
+\end{document}
